@@ -1,0 +1,15 @@
+{
+  "name": "whale-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "pug:watch": "pug src/views/dashboard.pug --pretty --out public --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "prettier": "^3.5.3"
+  }
+}
