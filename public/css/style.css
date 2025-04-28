@@ -1,6 +1,20 @@
+@layer base {
+  :root {
+    --color-blue-700: #1D6DB6;
+    /* ... */
+  }
+}
+
+
 html {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+}
+
+
+
+.sidebar__link:hover  .sidebar__icon path {
+  stroke: #1D6DB6;
 }

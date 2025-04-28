@@ -9,24 +9,13 @@ html(lang="en")
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="./css/style.css")
 
   body
-    //div.container.mx-auto.flex
-    //    div.w-2xs
-    //        //- Sidebar
-    //        include ../components/_sidebar.pug
-    //
-    //    div.w-full
-    //        //- Header
-    //        include ../components/_header.pug
-    //
-    //        main
-    //            block content
 
     block content
 
     include ../components/_sidebar.pug
 
     script(src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js")
-    script(src="/js/index.js")
+    script(src="./js/index.js")

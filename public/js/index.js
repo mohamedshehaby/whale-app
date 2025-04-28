@@ -1,0 +1,1 @@
+document.getElementsByClassName('sidebar__icon')
