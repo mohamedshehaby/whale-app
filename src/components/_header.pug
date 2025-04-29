@@ -1,0 +1,134 @@
+div(class="flex justify-between items-center p-4 bg-white")
+    h1(class=" text-xl md:text-2xl  font-medium text-gray-900") Home Dashboard
+    div(class="flex items-center gap-4")
+        div
+            div(
+                id="avatarButton"
+                type="button"
+                data-dropdown-toggle="languageDropdown"
+                data-dropdown-placement="bottom-start"
+                class="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-50/50 rounded-full dark:bg-gray-600 cursor-pointer"
+            )
+                <svg  width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.125 8.99984C12.125 9.56126 12.1014 10.107 12.0588 10.6339C12.0382 10.8894 11.8227 11.0832 11.5664 11.0832H6.43136C6.17597 11.0832 5.9609 10.8908 5.93998 10.6362C5.89663 10.1086 5.87496 9.56208 5.87496 8.99984C5.87496 8.43841 5.89854 7.8927 5.94111 7.36576C5.96175 7.11028 6.17723 6.9165 6.43355 6.9165H11.5686C11.824 6.9165 12.039 7.10892 12.0599 7.36346C12.1033 7.89111 12.125 8.43759 12.125 8.99984ZM13.1108 7.46792C13.0891 7.17252 13.3198 6.9165 13.616 6.9165H16.6824C16.9104 6.9165 17.1111 7.07037 17.1577 7.29348C17.273 7.84486 17.3333 8.41482 17.3333 8.99984C17.3333 9.58486 17.273 10.1548 17.1577 10.7062C17.1111 10.9293 16.9104 11.0832 16.6824 11.0832H13.616C13.3198 11.0832 13.0891 10.8272 13.1108 10.5318C13.1476 10.0332 13.1666 9.52169 13.1666 8.99984C13.1666 8.47799 13.1476 7.96651 13.1108 7.46792ZM16.7278 5.87484H13.3568C13.1105 5.87484 12.9017 5.69519 12.8578 5.45284C12.6307 4.2006 12.286 3.0844 11.8549 2.17201C11.6526 1.74397 12.0453 1.22577 12.4754 1.42363C14.3982 2.30823 15.9276 3.90211 16.7233 5.87181C16.7241 5.87364 16.7259 5.87484 16.7278 5.87484ZM11.7668 5.29416C11.8285 5.59699 11.5929 5.87484 11.2838 5.87484H6.71637C6.40722 5.87484 6.17157 5.59684 6.23368 5.29399C6.42809 4.34602 6.69257 3.50014 7.00452 2.79216C7.34631 2.02393 7.72717 1.46729 8.09501 1.11572C8.45959 0.770671 8.76233 0.666504 8.99996 0.666504C9.23759 0.666504 9.54032 0.770671 9.90491 1.11572C10.2727 1.46729 10.6536 2.02393 10.9954 2.79216C11.3102 3.49781 11.573 4.34376 11.7668 5.29416ZM5.14216 5.45284C5.09821 5.69519 4.88938 5.87484 4.64308 5.87484H2.01395C1.65932 5.87484 1.41897 5.51604 1.58086 5.20052C2.43259 3.5405 3.82409 2.20449 5.525 1.42285C5.9551 1.22521 6.34763 1.74341 6.14537 2.17136C5.7141 3.08387 5.36928 4.2003 5.14216 5.45284ZM0.842199 7.29348C0.888854 7.07037 1.08953 6.9165 1.31747 6.9165H4.3839C4.68009 6.9165 4.91086 7.17252 4.88907 7.46792C4.85231 7.96651 4.83329 8.47799 4.83329 8.99984C4.83329 9.52169 4.85231 10.0332 4.88907 10.5318C4.91086 10.8272 4.68009 11.0832 4.3839 11.0832H1.31747C1.08953 11.0832 0.888854 10.9293 0.842199 10.7062C0.726901 10.1548 0.666626 9.58486 0.666626 8.99984C0.666626 8.41482 0.726901 7.84486 0.842199 7.29348ZM7.00452 15.2059C7.00452 15.2048 7.00429 15.2038 7.00386 15.2028C6.68949 14.4978 6.42706 13.6529 6.23347 12.7057C6.17156 12.4028 6.40722 12.1248 6.71637 12.1248H11.2835C11.5927 12.1248 11.8283 12.4028 11.7662 12.7057C11.5718 13.6536 11.3073 14.499 10.9954 15.2043C10.6536 15.9725 10.2727 16.5291 9.90491 16.8807C9.54032 17.229 9.23759 17.3332 8.99996 17.3332C8.76233 17.3332 8.45959 17.229 8.09501 16.884C7.72741 16.5326 7.34681 15.9765 7.00518 15.209C7.00475 15.208 7.00452 15.207 7.00452 15.2059ZM4.64308 12.1248C4.88938 12.1248 5.09821 12.3045 5.14216 12.5468C5.36928 13.7994 5.7141 14.9158 6.14537 15.8283C6.34763 16.2563 5.9551 16.7745 5.525 16.5768C3.82409 15.7952 2.43259 14.4592 1.58086 12.7992C1.41897 12.4836 1.65932 12.1248 2.01395 12.1248H4.64308ZM15.986 12.1248C16.3406 12.1248 16.5809 12.4836 16.4191 12.7992C15.5677 14.4585 14.1771 15.7942 12.4786 16.5759C12.0486 16.7739 11.6556 16.2555 11.8576 15.8274C12.2881 14.9149 12.632 13.7985 12.8606 12.5461C12.9047 12.3041 13.1134 12.1248 13.3594 12.1248H15.986Z" fill="#1D6DB6"/>
+                </svg>
+
+
+            //- Dropdown menu
+            div(
+                id="languageDropdown"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+            )
+                div(class="py-1")
+                    div(class="flex justify-between items-center px-4 py-1 text-sm text-gray-900 cursor-pointer dark:text-white")
+                        img(src="../assets/images/english-flag.png", alt="English", class="w-5 h-5")
+                        a(
+                            href="#"
+                            class="block px-4 py-2 text-sm font-medium text-gray-950  dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        ) English
+                    div(class="flex justify-between items-center px-4 py-1 text-sm text-gray-900 cursor-pointer dark:text-white")
+                        img(src="../assets/images/arabic-flag.png", alt="Arabic", class="w-5 h-5")
+                        a(
+                            href="#"
+                            class="block px-4 py-2 text-sm font-medium text-gray-950  dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        ) Arabic
+        div
+            div(
+                id="avatarButton"
+                type="button"
+                data-dropdown-toggle="notificationDropdown"
+                data-dropdown-placement="bottom-start"
+                class="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-50/50 rounded-full dark:bg-gray-600 cursor-pointer"
+            )
+                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.39095 8.12495C4.38991 7.38371 4.5356 6.64959 4.81961 5.96491C5.10361 5.28024 5.52033 4.65854 6.04573 4.13567C6.57113 3.61279 7.19482 3.19907 7.88085 2.91837C8.56689 2.63766 9.3017 2.49551 10.0429 2.50011C13.1359 2.5231 15.6098 5.09396 15.6098 8.19557V8.74995C15.6098 11.548 16.1953 13.1717 16.7109 14.0592C16.7664 14.154 16.796 14.2618 16.7965 14.3717C16.7971 14.4816 16.7687 14.5897 16.7142 14.6851C16.6597 14.7805 16.581 14.8599 16.486 14.9151C16.391 14.9704 16.2831 14.9997 16.1732 15H3.82693C3.71703 14.9997 3.60914 14.9704 3.51415 14.9151C3.41917 14.8598 3.34045 14.7805 3.28592 14.685C3.2314 14.5896 3.20302 14.4815 3.20362 14.3716C3.20423 14.2617 3.23381 14.1539 3.28938 14.059C3.80526 13.1716 4.39095 11.5479 4.39095 8.74995L4.39095 8.12495Z" stroke="#1D6DB6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.5 15V15.625C7.5 16.288 7.76339 16.9239 8.23223 17.3928C8.70107 17.8616 9.33696 18.125 10 18.125C10.663 18.125 11.2989 17.8616 11.7678 17.3928C12.2366 16.9239 12.5 16.288 12.5 15.625V15" stroke="#1D6DB6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="17" cy="5" r="4" fill="#1D6DB6" stroke="white"/>
+                </svg>
+
+
+
+            //- Dropdown menu
+            div(
+                id="notificationDropdown"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+            )
+                div(class="w-96 p-4 bg-white border border-gray-200 rounded-lg sm:p-8 dark:bg-gray-800 dark:border-gray-700")
+                    div(class="flex items-center justify-between mb-4")
+                        h5(class="text-xl font-bold leading-none text-gray-950 dark:text-white") Notifications
+                        a(href="#" class="text-sm font-medium text-[#4E5566] hover:underline") Mark as read
+
+                    div(class="flow-root")
+                        ul(role="list" class="divide-y divide-gray-200 dark:divide-gray-700")
+                            //- Customer 1
+                            li(class="py-3 sm:py-4")
+                                div(class="flex items-center")
+                                    div(class="shrink-0")
+                                        div(
+                                            class="relative inline-flex items-center justify-center w-8 h-8 overflow-hidden bg-blue-700 rounded-full cursor-pointer"
+                                        )
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.69775 12.2979C10.268 12.0128 10.9326 11.9941 11.5151 12.2422L11.6353 12.2969V12.2979L13.4077 13.1836C13.4695 13.2145 13.5037 13.2789 13.4995 13.3438L13.4819 13.4072C13.4444 13.4822 13.3579 13.5163 13.2808 13.4902L13.2388 13.4727L11.4858 12.5957C11.0214 12.3637 10.4826 12.3406 10.0034 12.5264L9.99268 12.5303L9.98193 12.5352L9.86768 12.5859L9.84619 12.5957L8.96826 13.0352C8.39794 13.3202 7.73336 13.338 7.15088 13.0898L7.01709 13.0283L6.15283 12.5957C5.68833 12.3635 5.1497 12.3406 4.67041 12.5264L4.65967 12.5303L4.64893 12.5352L4.53467 12.5859L4.51318 12.5957L2.74072 13.4824C2.67912 13.5131 2.60738 13.5019 2.55811 13.46L2.51709 13.4072C2.48868 13.3501 2.49598 13.2839 2.53076 13.2354L2.57471 13.1943L2.604 13.1777L4.36377 12.2979C4.86425 12.0476 5.43779 12.0027 5.96436 12.1631L6.18604 12.2441L6.30225 12.2969V12.2979L7.18018 12.7363C7.64471 12.9685 8.18327 12.9924 8.6626 12.8066L8.68408 12.7969L8.79834 12.7471L8.80908 12.7422L8.81982 12.7363L9.69775 12.2979ZM7.3335 1.83301H8.6665C8.75852 1.83304 8.8335 1.90797 8.8335 2V3.30273L9.25049 3.37305L11.4702 3.74219C11.872 3.80919 12.1665 4.1571 12.1665 4.56445V7.21289L12.5083 7.32715L13.8804 7.78418C14.0424 7.83819 14.1344 8.0035 14.103 8.16406L14.0815 8.23145L12.8442 11.1172L12.0825 10.7363C11.2469 10.3185 10.2724 10.2927 9.41943 10.6582L9.25049 10.7363L8.37256 11.1758C8.16708 11.2785 7.9297 11.291 7.71631 11.2139L7.62744 11.1758L6.74951 10.7363C5.91363 10.3184 4.93865 10.2924 4.08545 10.6582L3.9165 10.7363L3.49268 10.9482L1.95557 8.25879C1.86436 8.0989 1.92143 7.90099 2.0708 7.80957L2.14014 7.77734L3.4917 7.32715L3.8335 7.21289V4.56445C3.8335 4.20796 4.05865 3.89722 4.38428 3.78027L4.52979 3.74219L6.74854 3.37305L7.1665 3.30273V2C7.1665 1.90796 7.24143 1.83301 7.3335 1.83301ZM11.8335 4.14062L11.4155 4.07129L7.99951 3.50195L7.91748 3.51562L4.58447 4.07129L4.1665 4.14062V7.10156L4.82471 6.88281L7.73584 5.91211C7.86404 5.86938 8.00029 5.8586 8.13232 5.87988L8.26318 5.91211L11.1753 6.88281L11.8335 7.10156V4.14062Z" fill="white" stroke="white"/>
+                                            </svg>
+
+                                    div(class="flex-1 min-w-0 ms-4 gap-1")
+                                        p(class="text-sm font-medium text-gray-950 dark:text-white") Trip Number#1220
+                                        p(class="text-sm text-[#4E5566]") has now arrived at the dock and the fish is being delivered to the delivery person.
+                                        p(class="text-sm text-[#8C94A3]") 2 hours ago
+
+                                li(class="py-3 sm:py-4")
+                                    div(class="flex items-center")
+                                        div(class="shrink-0")
+                                            div(
+                                                class="relative inline-flex items-center justify-center w-8 h-8 overflow-hidden bg-blue-700 rounded-full cursor-pointer"
+                                            )
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.69775 12.2979C10.268 12.0128 10.9326 11.9941 11.5151 12.2422L11.6353 12.2969V12.2979L13.4077 13.1836C13.4695 13.2145 13.5037 13.2789 13.4995 13.3438L13.4819 13.4072C13.4444 13.4822 13.3579 13.5163 13.2808 13.4902L13.2388 13.4727L11.4858 12.5957C11.0214 12.3637 10.4826 12.3406 10.0034 12.5264L9.99268 12.5303L9.98193 12.5352L9.86768 12.5859L9.84619 12.5957L8.96826 13.0352C8.39794 13.3202 7.73336 13.338 7.15088 13.0898L7.01709 13.0283L6.15283 12.5957C5.68833 12.3635 5.1497 12.3406 4.67041 12.5264L4.65967 12.5303L4.64893 12.5352L4.53467 12.5859L4.51318 12.5957L2.74072 13.4824C2.67912 13.5131 2.60738 13.5019 2.55811 13.46L2.51709 13.4072C2.48868 13.3501 2.49598 13.2839 2.53076 13.2354L2.57471 13.1943L2.604 13.1777L4.36377 12.2979C4.86425 12.0476 5.43779 12.0027 5.96436 12.1631L6.18604 12.2441L6.30225 12.2969V12.2979L7.18018 12.7363C7.64471 12.9685 8.18327 12.9924 8.6626 12.8066L8.68408 12.7969L8.79834 12.7471L8.80908 12.7422L8.81982 12.7363L9.69775 12.2979ZM7.3335 1.83301H8.6665C8.75852 1.83304 8.8335 1.90797 8.8335 2V3.30273L9.25049 3.37305L11.4702 3.74219C11.872 3.80919 12.1665 4.1571 12.1665 4.56445V7.21289L12.5083 7.32715L13.8804 7.78418C14.0424 7.83819 14.1344 8.0035 14.103 8.16406L14.0815 8.23145L12.8442 11.1172L12.0825 10.7363C11.2469 10.3185 10.2724 10.2927 9.41943 10.6582L9.25049 10.7363L8.37256 11.1758C8.16708 11.2785 7.9297 11.291 7.71631 11.2139L7.62744 11.1758L6.74951 10.7363C5.91363 10.3184 4.93865 10.2924 4.08545 10.6582L3.9165 10.7363L3.49268 10.9482L1.95557 8.25879C1.86436 8.0989 1.92143 7.90099 2.0708 7.80957L2.14014 7.77734L3.4917 7.32715L3.8335 7.21289V4.56445C3.8335 4.20796 4.05865 3.89722 4.38428 3.78027L4.52979 3.74219L6.74854 3.37305L7.1665 3.30273V2C7.1665 1.90796 7.24143 1.83301 7.3335 1.83301ZM11.8335 4.14062L11.4155 4.07129L7.99951 3.50195L7.91748 3.51562L4.58447 4.07129L4.1665 4.14062V7.10156L4.82471 6.88281L7.73584 5.91211C7.86404 5.86938 8.00029 5.8586 8.13232 5.87988L8.26318 5.91211L11.1753 6.88281L11.8335 7.10156V4.14062Z" fill="white" stroke="white"/>
+                                                </svg>
+
+                                        div(class="flex-1 min-w-0 ms-4 gap-1")
+                                            p(class="text-sm font-medium text-gray-950 dark:text-white") Trip Number#1220
+                                            p(class="text-sm text-[#4E5566]") has now arrived at the dock and the fish is being delivered to the delivery person.
+                                            p(class="text-sm text-[#8C94A3]") 2 hours ago
+
+
+
+
+        div
+            div(
+                id="avatarButton"
+                type="button"
+                data-dropdown-toggle="userDropdown"
+                data-dropdown-placement="bottom-start"
+                class="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-200 rounded-full dark:bg-gray-600 cursor-pointer"
+            )
+                span(class="font-medium text-white") M
+
+
+            div(
+                id="userDropdown"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+            )
+                div(class="px-4 py-3 text-sm text-gray-900 dark:text-white flex gap-2 items-center")
+                    div(
+                        class="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-200 rounded-full dark:bg-gray-600 cursor-pointer"
+                    )
+                        span(class="font-medium text-white") M
+                    div
+                        div(class="text-gray-950 text-base font-medium") Mohamed ElShehaby
+                        div(class="text-[#1d1d1d40] text-sm truncate") mohamedshehaby365@gmail.com
+
+                div(class="py-1")
+                    a(
+                        href="#"
+                        class="block px-4 py-2 text-sm font-medium text-gray-950 hover:bg-gray-50 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    ) Profile
+                    a(
+                        href="#"
+                        class="block px-4 py-2 text-sm  font-medium text-gray-950 hover:bg-gray-50 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    ) Sign out
+
+
+
+
+
