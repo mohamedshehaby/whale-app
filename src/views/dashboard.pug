@@ -1,7 +1,7 @@
 extends _base.pug
 
 mixin statCard(title, description, icon, backgroundColor)
-    div(class="flex gap-6 block max-w-sm p-6 bg-white rounded-lg shadow-sm  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700")
+    div(class="flex gap-6 max-w-sm p-6 bg-white rounded-lg shadow-sm  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700")
 
         div(
             style=`background-color: ${backgroundColor}`
@@ -11,7 +11,7 @@ mixin statCard(title, description, icon, backgroundColor)
 
         div(class="flex flex-col gap-1.5")
             h5(class="text-2xl font-medium tracking-tight text-[#1D2026] dark:text-white")= title
-            p(class="text-[#4E5566] text-sm font-normal text-gray-500 dark:text-gray-400")= description
+            p(class="text-[#4E5566] text-sm font-normal  dark:text-gray-400")= description
 
 
 
@@ -71,43 +71,10 @@ block content
             "</svg>\n", "#EBEBFF")
 
 
-        div
-            div(class="max-w-sm w-full bg-white rounded-lg shadow-sm dark:bg-gray-800 p-2 md:p-4")
-                div(class="grid grid-cols-1 items-center border-gray-200 border-b dark:border-gray-700 justify-between")
-                    div(class="flex justify-between items-center pt-5")
-                        a(
-                            href="#"
-                            class=" text-base font-semibold text-[#1D2026]  dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2"
-                        )
-                            | Revenue
-                        button(
-                            id="dropdownDefaultButton"
-                            data-dropdown-toggle="lastDaysdropdown"
-                            data-dropdown-placement="bottom"
-                            class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white"
-                            type="button"
-                        )
-                            | Last 7 days
-                            svg(class="w-2.5 m-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6")
-                                path(stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4")
-
-                        //- Dropdown
-                        div(id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700")
-                            ul(class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton")
-                                li
-                                    a(href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white") Yesterday
-                                li
-                                    a(href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white") Today
-                                li
-                                    a(href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white") Last 7 days
-                                li
-                                    a(href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white") Last 30 days
-                                li
-                                    a(href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white") Last 90 days
-
-
-
-
-                div(id="area-chart")
+        div(class="grid grid-cols-1 lg:grid-cols-2 gap-6 ")
+            include ../components/_revenueChart
+            include ../components/_productivityChart
+            include ../components/_expensesChart
+            
 
 
