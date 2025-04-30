@@ -88,12 +88,12 @@ createAreaChart("revenue-chart", {
   legend: { show: false },
 });
 
-
-
-
-if(document.getElementById("productivity-chart") && typeof ApexCharts !== 'undefined') {
+if (
+  document.getElementById("productivity-chart") &&
+  typeof ApexCharts !== "undefined"
+) {
   console.log("productivity card exists");
-  
+
   const chart = new ApexCharts(document.getElementById("productivity-chart"), {
     colors: ["#1A56DB", "#FDBA8C"],
     series: [
@@ -152,7 +152,7 @@ if(document.getElementById("productivity-chart") && typeof ApexCharts !== 'undef
       padding: {
         left: 2,
         right: 2,
-        top: -14
+        top: -14,
       },
     },
     dataLabels: {
@@ -167,8 +167,8 @@ if(document.getElementById("productivity-chart") && typeof ApexCharts !== 'undef
         show: true,
         style: {
           fontFamily: "Roboto, sans-serif",
-          cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
-        }
+          cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
+        },
       },
       axisBorder: {
         show: false,
@@ -187,9 +187,10 @@ if(document.getElementById("productivity-chart") && typeof ApexCharts !== 'undef
   chart.render();
 }
 
-
-
-if (document.getElementById("expenses-chart") && typeof ApexCharts !== 'undefined') {
+if (
+  document.getElementById("expenses-chart") &&
+  typeof ApexCharts !== "undefined"
+) {
   const chart = new ApexCharts(document.getElementById("expenses-chart"), {
     chart: {
       height: "320px",
@@ -221,7 +222,7 @@ if (document.getElementById("expenses-chart") && typeof ApexCharts !== 'undefine
       padding: {
         left: 2,
         right: 2,
-        top: -26
+        top: -26,
       },
     },
     series: [
@@ -237,19 +238,27 @@ if (document.getElementById("expenses-chart") && typeof ApexCharts !== 'undefine
       },
     ],
     legend: {
-      show: false
+      show: false,
     },
     stroke: {
-      curve: 'smooth'
+      curve: "smooth",
     },
     xaxis: {
-      categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
+      categories: [
+        "01 Feb",
+        "02 Feb",
+        "03 Feb",
+        "04 Feb",
+        "05 Feb",
+        "06 Feb",
+        "07 Feb",
+      ],
       labels: {
         show: true,
         style: {
           fontFamily: "Inter, sans-serif",
-          cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
-        }
+          cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
+        },
       },
       axisBorder: {
         show: false,
@@ -262,5 +271,89 @@ if (document.getElementById("expenses-chart") && typeof ApexCharts !== 'undefine
       show: false,
     },
   });
+  chart.render();
+}
+
+const options = {
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    width: "100%",
+    type: "area",
+    fontFamily: "Inter, sans-serif",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: "#1C64F2",
+      gradientToColors: ["#1C64F2"],
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    width: 6,
+  },
+  grid: {
+    show: false,
+    strokeDashArray: 4,
+    padding: {
+      left: 2,
+      right: 2,
+      top: 0,
+    },
+  },
+  series: [
+    {
+      name: "New users",
+      data: [6500, 6418, 6456, 6526, 6356, 6456],
+      color: "#1A56DB",
+    },
+  ],
+  xaxis: {
+    categories: [
+      "01 February",
+      "02 February",
+      "03 February",
+      "04 February",
+      "05 February",
+      "06 February",
+      "07 February",
+    ],
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+  },
+};
+
+if (
+  document.getElementById("fish-chart") &&
+  typeof ApexCharts !== "undefined"
+) {
+  const chart = new ApexCharts(document.getElementById("fish-chart"), options);
   chart.render();
 }

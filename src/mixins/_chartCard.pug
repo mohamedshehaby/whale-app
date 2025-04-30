@@ -1,10 +1,10 @@
 mixin chartCard(title, dropdownItems = ['Yesterday', 'Today', 'Last 7 days', 'Last 30 days', 'Last 90 days'])
-    - const dropdownId = title.toLowerCase().replace(/\s+/g, '-') + '-dropdown'
-    - const buttonId = dropdownId + '-button'
-    div(class="w-full bg-white rounded-lg shadow-sm dark:bg-gray-800 p-2 md:p-4")
+    - var dropdownId = title.toLowerCase().replace(/\s+/g, '-') + '-dropdown'
+    - var buttonId = dropdownId + '-button'
+    div(class="w-full bg-white rounded-xl shadow-sm dark:bg-gray-800 p-2 md:p-4")
         div(class="grid grid-cols-1 items-center border-gray-200 border-b dark:border-gray-700 justify-between")
             div(class="flex justify-between items-center")
-                h2(class="text-base font-semibold text-[#1D2026] dark:text-white px-3 py-2") #{title}
+                h2(class="text-base font-semibold text-shark dark:text-white px-3 py-2") #{title}
                 div(class="relative")
                     button(
                         id=buttonId

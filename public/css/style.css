@@ -6,11 +6,12 @@
     --color-blue-300: #8dc1ec;
     --color-blue-400: #50a3e0;
     --color-blue-500: #2987ce;
-    --color-blue-600: #1c70b8;
+    --color-blue-600: #1d6db6;
     --color-blue-700: #17558d;
     --color-blue-800: #174975;
     --color-blue-900: #183e62;
     --color-blue-950: #102741;
+
     /*Gray*/
     --color-gray-50: #f6f6f6;
     --color-gray-100: #e7e7e7;
@@ -24,8 +25,119 @@
     --color-gray-900: #3d3d3d;
     --color-gray-950: #131313;
     /* Design Colors */
-    --color-sky-1: #f4f4fe;
+    --color-selago: #f4f4fe;
+    --color-trout: #4e5566;
+    --color-manatee: #8c94a3;
+    --color-shark: #1d2026;
+    --color-cod-gray: #1d1d1d;
+    --color-athens-gray: #e9eaf0;
+    --color-storm-gray: #6e7485;
+    --color-catskill-white: #f5f7fa;
+    --color-forest-green: #23bd33;
+    --color-tree-poppy: #fd8e1f;
+    --color-red-orange: #ff3a3a;
   }
+}
+
+.text-red-orange {
+  color: var(--color-red-orange);
+}
+
+.bg-red-orange {
+  background-color: var(--color-red-orange);
+}
+
+.bg-red-orange\/10 {
+  background-color: rgba(255, 58, 58, 0.1);
+}
+
+.text-tree-poppy {
+  color: var(--color-tree-poppy);
+}
+
+.bg-tree-poppy {
+  background-color: var(--color-tree-poppy);
+}
+
+.bg-tree-poppy\/10 {
+  background-color: rgba(253, 142, 31, 0.1);
+}
+
+.text-forest-green {
+  color: var(--color-forest-green);
+}
+
+.bg-forest-green {
+  background-color: var(--color-forest-green);
+}
+
+.bg-forest-green\/10 {
+  background-color: rgba(35, 189, 51, 0.1);
+}
+
+.bg-catskill-white {
+  background-color: var(--color-catskill-white);
+}
+
+.text-catskill-white {
+  color: var(--color-catskill-white);
+}
+
+input[type="search"]::placeholder {
+  color: rgba(140, 148, 163, 1);
+  font-size: 16px;
+}
+
+.border-athens-gray {
+  border-color: rgba(233, 234, 240, 1);
+}
+
+.text-storm-gray {
+  color: var(--color-storm-gray);
+}
+
+.bg-storm-gray {
+  background-color: var(--color-storm-gray);
+}
+
+.text-selago {
+  color: var(--color-selago);
+}
+
+.text-trout {
+  color: var(--color-trout);
+}
+
+.text-manatee {
+  color: var(--color-manatee);
+}
+
+.text-shark {
+  color: var(--color-shark);
+}
+
+.text-cod-gray {
+  color: var(--color-cod-gray);
+}
+
+.bg-selago {
+  background-color: var(--color-selago);
+}
+
+.bg-trout {
+  background-color: var(--color-trout);
+}
+
+.bg-manatee {
+  background-color: var(--color-manatee);
+}
+
+.bg-shark {
+  background-color: var(--color-shark);
+}
+
+.bg-cod-gray {
+  background-color: var(--color-cod-gray);
 }
 
 html {
@@ -52,28 +164,4 @@ html {
 li::marker {
   content: none;
   display: none;
-}
-
-text-\[#4E5566\] {
-  color: #4e5566;
-}
-
-text-\[#8C94A3\] {
-  color: #8c94a3;
-}
-
-text-\[#1D1D1D40\] {
-  color: #1d1d1d40;
-}
-
-text-\[#1D2026\] {
-  color: #1d2026;
-}
-
-bg-\[#F8F8F8\] {
-  background-color: #f8f8f8;
-}
-
-bg-\[#F4F4FE\] {
-  background-color: var(--color-sky-1);
 }

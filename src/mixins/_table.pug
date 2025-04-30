@@ -1,0 +1,106 @@
+include ../mixins/_primaryButton
+
+div(class="w-full bg-white rounded-xl shadow-sm dark:bg-gray-800 p-2 md:p-4")
+    div(class="flex flex-col gap-6 ")
+        // Table header
+        div(class="flex justify-between items-center")
+            h2(class="text-lg font-medium text-shark") Current Trips
+            div(class="flex gap-4 justify-between items-center")
+                div(class="relative")
+                    div(class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none")
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z" stroke="#1D2026" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.4431 16.4434L20.9994 20.9997" stroke="#1D2026" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    input(
+                        type="search"
+                        id="search"
+                        placeholder="Search"
+                        required
+                        class="block w-full p-3 ps-10 text-base text-gray-900 border border-athens-gray  rounded-xl bg-white focus:ring-blue-500 focus:border-blue-500 "
+                    )
+                div(class="cursor-pointer flex justify-between items-center border border-athens-gray bg-white h-12 w-12 rounded-full")
+                    <svg class="mx-auto" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.1001 11.0166L7.98779 10.8789L1.12451 2.49316C0.911927 2.23213 0.846992 1.88195 0.944824 1.56836L0.996582 1.43652L0.998535 1.43262C1.16367 1.08232 1.51248 0.860352 1.8999 0.860352H18.1021C18.441 0.860442 18.7504 1.03044 18.9331 1.30762L19.0034 1.43262C19.1482 1.73981 19.128 2.09398 18.9565 2.37891L18.8735 2.49609L12.0142 10.8789L11.9009 11.0166V15.9619C11.9009 16.1943 11.7871 16.4086 11.6001 16.5371L11.5151 16.5869C11.3031 16.6919 11.0614 16.6851 10.8638 16.5762L10.7817 16.5225H10.7808L8.38037 14.7217L8.37842 14.7207L8.31592 14.6689C8.17952 14.5401 8.10014 14.3576 8.1001 14.1621V11.0166Z" stroke="#1D6DB6"/>
+                    </svg>
+
+                +primaryButton('Add')
+
+
+
+
+        // Table body
+        div(class="relative overflow-x-auto")
+            table(class="w-full text-sm text-left rtl:text-right text-gray-500 ")
+                thead(class="text-sm text-storm-gray uppercase bg-selago ")
+                    tr
+                        th(scope="col" class="px-6 py-3") image
+                        th(scope="col" class="px-6 py-3") ID Trip
+                        th(scope="col" class="px-6 py-3") Permit
+                        th(scope="col" class="px-6 py-3") Captain
+                        th(scope="col" class="px-6 py-3") Duration
+                        th(scope="col" class="px-6 py-3") Escorts
+                        th(scope="col" class="px-6 py-3") Status
+                        th(scope="col" class="px-6 py-3") procedures
+
+
+                tbody
+                    tr(class="bg-white border-b  border-gray-200")
+                        td(class="px-6 py-4")
+                            img(class="w-12 h-8 rounded-sm" src="../assets/images/user-image.png" alt="Default avatar")
+                        td(class="px-6 py-4")
+                            | #12334
+                        td(class="px-6 py-4")
+                            span(class="text-forest-green font-medium") active
+                        td(class="px-6 py-4") Ahmed Ali
+                        td(class="px-6 py-4") 5 days
+                        td(class="px-6 py-4") 5 fishermen
+                        td(class="px-6 py-4")
+                            span(class="bg-catskill-white text-shark text-xs font-medium px-4 py-1 rounded-lg") Back
+                        td(class="px-6 py-4")
+                            div(class="flex gap-2")
+                                div(class="cursor-pointer flex w-8 h-8 rounded-full bg-selago justify-center items-center")
+                                    <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.74428 0.111328C4.21694 0.111328 2.99394 0.806947 2.10362 1.63488C1.21898 2.45526 0.627325 3.4382 0.347565 4.11303C0.285187 4.26236 0.285187 4.4287 0.347565 4.57803C0.627325 5.25286 1.21898 6.2358 2.10362 7.05617C2.99394 7.88411 4.21694 8.57973 5.74428 8.57973C7.27162 8.57973 8.49462 7.88411 9.38494 7.05617C10.2696 6.23391 10.8612 5.25286 11.1429 4.57803C11.2053 4.4287 11.2053 4.26236 11.1429 4.11303C10.8612 3.4382 10.2696 2.45526 9.38494 1.63488C8.49462 0.806947 7.27162 0.111328 5.74428 0.111328ZM3.02229 4.34553C3.02229 3.62361 3.30907 2.93127 3.81955 2.42079C4.33002 1.91032 5.02237 1.62354 5.74428 1.62354C6.4662 1.62354 7.15854 1.91032 7.66902 2.42079C8.17949 2.93127 8.46627 3.62361 8.46627 4.34553C8.46627 5.06744 8.17949 5.75979 7.66902 6.27026C7.15854 6.78073 6.4662 7.06751 5.74428 7.06751C5.02237 7.06751 4.33002 6.78073 3.81955 6.27026C3.30907 5.75979 3.02229 5.06744 3.02229 4.34553ZM5.74428 3.13576C5.74428 3.80302 5.20177 4.34553 4.53451 4.34553C4.4003 4.34553 4.27176 4.32284 4.15078 4.28315C4.04682 4.24912 3.92584 4.31339 3.92962 4.42303C3.93529 4.55346 3.9542 4.68389 3.99011 4.81431C4.24908 5.78213 5.24525 6.35677 6.21307 6.09781C7.18088 5.83884 7.75553 4.84267 7.49656 3.87485C7.28674 3.09039 6.59301 2.56301 5.82178 2.53087C5.71215 2.52709 5.64788 2.64618 5.6819 2.75203C5.7216 2.87301 5.74428 3.00155 5.74428 3.13576Z" fill="#1D6DB6"/>
+                                    </svg>
+                                div(class="cursor-pointer flex w-8 h-8 rounded-full bg-catskill-white justify-center items-center")
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.02271 0.953885L6.99224 1.98435L9.76001 4.75211L10.7905 3.72165C11.3227 3.18939 11.3227 2.32712 10.7905 1.79486L9.95163 0.953885C9.41936 0.421622 8.5571 0.421622 8.02483 0.953885H8.02271ZM6.51108 2.46551L1.54826 7.43046C1.32684 7.65188 1.16503 7.92653 1.07561 8.22673L0.321924 10.788C0.268698 10.9689 0.317666 11.1627 0.449667 11.2947C0.581669 11.4267 0.775412 11.4757 0.954253 11.4246L3.5155 10.6709C3.8157 10.5815 4.09035 10.4197 4.31177 10.1982L9.27885 5.23328L6.51108 2.46551Z" fill="#1D2026"/>
+                                    </svg>
+
+                                div(class="cursor-pointer flex w-8 h-8 rounded-full bg-red-orange/10 justify-center items-center")
+                                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.4137 4.44531L9.92932 12.7168C9.90436 13.1383 9.58652 13.415 9.26428 13.415H3.28967C3.00778 13.4149 2.72903 13.2034 2.64709 12.8682L2.62463 12.7168L2.14124 4.44531H10.4137ZM4.81409 1.12207H7.73987C7.80577 1.12207 7.87833 1.15182 7.93323 1.21582L7.98206 1.29199L7.98303 1.29492L8.15784 1.66602L8.29358 1.95312H10.944C11.0674 1.95326 11.2211 2.06866 11.2213 2.2832C11.2213 2.49805 11.0674 2.61412 10.944 2.61426H1.60999C1.48655 2.61399 1.33264 2.49793 1.33264 2.2832C1.33287 2.06879 1.48664 1.9534 1.60999 1.95312H4.26038L4.39612 1.66602L4.57092 1.29492L4.5719 1.29199C4.62613 1.17506 4.72606 1.12207 4.81409 1.12207Z" fill="#FF3838" stroke="#FF3A3A"/>
+                                    <path d="M6.64358 7.63984C6.64358 7.51063 6.54065 7.40625 6.41324 7.40625C6.28583 7.40625 6.1829 7.51063 6.1829 7.63984V8.69099H5.14636C5.01895 8.69099 4.91602 8.79537 4.91602 8.92458C4.91602 9.05378 5.01895 9.15817 5.14636 9.15817H6.1829V10.2093C6.1829 10.3385 6.28583 10.4429 6.41324 10.4429C6.54065 10.4429 6.64358 10.3385 6.64358 10.2093V9.15817H7.68012C7.80753 9.15817 7.91046 9.05378 7.91046 8.92458C7.91046 8.79537 7.80753 8.69099 7.68012 8.69099H6.64358V7.63984Z" fill="white"/>
+                                    </svg>
+
+
+
+
+                    tr(class="bg-white border-b  border-gray-200")
+                        td(class="px-6 py-4")
+                            img(class="w-12 h-8 rounded-sm" src="../assets/images/user-image.png" alt="Default avatar")
+                        td(class="px-6 py-4")
+                            | #12334
+                        td(class="px-6 py-4")
+                            span(class="text-tree-poppy font-medium") pending
+                        td(class="px-6 py-4") Ahmed Ali
+                        td(class="px-6 py-4") 5 days
+                        td(class="px-6 py-4") 5 fishermen
+                        td(class="px-6 py-4")
+                            span(class="bg-forest-green/10 text-forest-green text-xs font-medium px-4 py-1 rounded-lg") Arrived
+
+                    tr(class="bg-white border-b  border-gray-200")
+                        td(class="px-6 py-4")
+                            img(class="w-12 h-8 rounded-sm" src="../assets/images/user-image.png" alt="Default avatar")
+                        td(class="px-6 py-4")
+                            | #12334
+                        td(class="px-6 py-4")
+                            span(class="text-tree-poppy font-medium") pending
+                        td(class="px-6 py-4") Ahmed Ali
+                        td(class="px-6 py-4") 5 days
+                        td(class="px-6 py-4") 5 fishermen
+                        td(class="px-6 py-4")
+                            span(class="bg-tree-poppy/10 text-tree-poppy text-xs font-medium px-4 py-1 rounded-lg") Finished
+
+
